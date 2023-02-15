@@ -51,3 +51,8 @@ console.log(person1.getAge());
 console.log(person1.getGender())
 console.log(person1.getOccupation());
 
+
+// Output: "Alice"
+// Output: 30
+// Output: "Female"
+// Output: "Engineer"
