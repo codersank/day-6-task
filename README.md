@@ -43,3 +43,11 @@ class Person {
     this.occupation = occupation;
   }
 }
+
+let person1 = new Person("Alice", 30, "Female", "Engineer");
+
+console.log(person1.getName())
+console.log(person1.getAge());
+console.log(person1.getGender())
+console.log(person1.getOccupation());
+
