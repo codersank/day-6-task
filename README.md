@@ -56,3 +56,37 @@ console.log(person1.getOccupation());
 // Output: 30
 // Output: "Female"
 // Output: "Engineer"
+
+
+
+class to calculate the uber price
+
+class UberPriceCalculator {
+  constructor(distance, surgeMultiplier, serviceFee) {
+    this.distance = distance;
+    this.surgeMultiplier = surgeMultiplier;
+    this.serviceFee = serviceFee;
+    this.baseFare = 2.50;
+    this.costPerMile = 1.50;
+    this.costPerMinute = 0.20;
+  }
+
+  calculatePrice() {
+    const distanceCost = this.distance * this.costPerMile;
+    const timeCost = 10 * this.costPerMinute;
+    const subtotal = this.baseFare + distanceCost + timeCost;
+    const surgePrice = subtotal * this.surgeMultiplier;
+    const totalCost = surgePrice + this.serviceFee;
+
+    return totalCost.toFixed(2);
+  }
+}
+
+// Example usage
+const distance = 10; // in miles
+const surgeMultiplier = 1.5; // 50% surge
+const serviceFee = 1.50; // flat fee
+
+const calculator = new UberPriceCalculator(distance, surgeMultiplier, serviceFee);
+const price = calculator.calculatePrice();
+console.log(price); // Output: "25.75"
